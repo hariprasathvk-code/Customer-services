@@ -116,5 +116,28 @@ void SimulateIssue() {
     }
 }
 
+// Error Analysis
+void ErrorAnalysis() {
+    cout << "\nAnalyzing error reports" << endl;
+    cout << "Performing root cause analysis." << endl;
+}
+
+// Termination (T)
+void Termination() {
+    char choice;
+    cout << "\nProcess ending." << endl;
+
+    cout << "Would customer like to provide feedback? (y/n): ";
+    cin >> choice;
+
+    if (choice == 'y' || choice == 'Y') {
+        Survey();   // Call Survey
+    } 
+    else {
+        cout << "No feedback provided." << endl;
+    }
+
+    cout << "\n Process Completed " << endl;
+}
 
 
