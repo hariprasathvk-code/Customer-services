@@ -78,5 +78,43 @@ void Process() {
         ErrorAnalysis();  // Retry analysis if still not fixed
     }
 }
+// Resolve Issue
+void ResolveIssue() {
+    cout << "\n Attempting to resolve known issue..." << endl;
+}
+
+// Simulate Issue (SI)
+void SimulateIssue() {
+    char choice;
+    string issueDetails;
+
+    cout << "\n Simulating issue..." << endl;
+    cout << "Do we need more info from customer? (y/n): ";
+    cin >> choice;
+    cin.ignore();
+
+    if (choice == 'y' || choice == 'Y') {
+        cout << "Contacting customer for more information..." << endl;
+        SimulateIssue(); // Loop until enough info
+    } 
+    else {
+        cout << "Enter details of the issue for error report: ";
+        getline(cin, issueDetails);
+
+        // Generate error report
+        cout << "\n Issue details recorded." << endl;
+
+        // Save to CSV (Error Database)
+        ofstream db("error_database.csv", ios::app);
+        if (db.is_open()) {
+            db << "\"" << issueDetails << "\"" << endl;
+            db.close();
+            cout << " Issue saved to error_database.csv" << endl;
+        } else {
+            cout << " Failed to open database file!" << endl;
+        }
+    }
+}
+
 
 
