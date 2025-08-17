@@ -122,7 +122,7 @@ void ErrorAnalysis() {
     cout << "Performing root cause analysis." << endl;
 }
 
-// Termination (T)
+
 void Termination() {
     char choice;
     cout << "\nProcess ending." << endl;
@@ -140,4 +140,8 @@ void Termination() {
     cout << "\n Process Completed " << endl;
 }
 
-
+// Survey
+void Survey() {
+    cout << "\n[Survey] Collecting customer feedback..." << endl;
+    cout << "Thank you for your feedback!" << endl;
+}
